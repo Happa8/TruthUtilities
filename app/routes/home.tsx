@@ -1,5 +1,6 @@
 import { Button, Card, Stack } from "@chakra-ui/react";
 import type { Route } from "./+types/home";
+import { NavLink } from "react-router";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -11,19 +12,21 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <Stack w={"100%"} direction={"row"}>
-      <Card.Root width="320px" maxWidth={"100%"}>
+      {/* <Card.Root width="320px" maxWidth={"100%"}>
         <Card.Body>
           <Card.Title>一括削除</Card.Title>
           <Card.Description>自分のTruthを全て削除します</Card.Description>
         </Card.Body>
         <Card.Footer justifyContent="flex-end">
-          <Button>利用する</Button>
+          <Button asChild>
+            <NavLink to="/delete-all-truth">利用する</NavLink>
+          </Button>
         </Card.Footer>
-      </Card.Root>
+      </Card.Root> */}
 
       <Card.Root width="320px" maxWidth={"100%"}>
         <Card.Body>
-          <Card.Title>バックアップ</Card.Title>
+          <Card.Title>一括バックアップ</Card.Title>
           <Card.Description>
             自分のTruthデータを一括ダウンロードします
           </Card.Description>
